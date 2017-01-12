@@ -1,4 +1,9 @@
-from bottle import route, run, template
+from bottle import route, run, template, default_app
+import pymongo
+
+@route('/')
+def start():
+    return 'Make the URL end with /hello/<name>'
 
 @route('/hello/<name>')
 def index(name):
@@ -7,4 +12,4 @@ def index(name):
 if __name__ == '__main__':
     run(host='localhost', port=5000, server='gunicorn')
 
-app = bottle.default_app()
+app = default_app()
