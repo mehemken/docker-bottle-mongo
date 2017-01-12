@@ -1,0 +1,4 @@
+name: mongo-uni
+dependencies:
+  - python=2.7
+  - pymongo
