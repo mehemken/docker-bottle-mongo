@@ -11,4 +11,4 @@ RUN ln -s /usr/bin/gunicorn /bin/gunicorn
 
 EXPOSE 5000
 
-ENTRYPOINT ["gunicorn", "--config=gunicorn.py", "app:app"]
+ENTRYPOINT ["gunicorn", "--config=gunicorn.py", "blog:blog"]
